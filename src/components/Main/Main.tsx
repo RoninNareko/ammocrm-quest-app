@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
+import background from "../../assets/bg.png";
 
 export default function Main() {
   const MyWidgetData = useMemo(
@@ -28,15 +29,14 @@ export default function Main() {
   );
 
   const widgetStyles =
-    "uppercase font-medium mdx:text-left mdx:pl-[15px] mdx:text-[13px] mdx:w-max relative after:opacity-0 mdx:after:opacity-100 after:absolute after:content-[''] after:left-[0] after:top-[10px] after:red after:bg-gradient-to-r from-[#FCB045] to-[#FD1D1D] after:w-[10px] after:h-[1px]";
+    "uppercase font-medium mdx:font-normal mdx:text-left mdx:pl-[15px] mdx:text-[13px] mdx:w-max relative after:opacity-0 mdx:after:opacity-100 after:absolute after:content-[''] after:left-[0] after:top-[40%] after:red after:bg-gradient-to-r from-[#FCB045] to-[#FD1D1D] after:w-[10px] after:h-[1px]";
   const descriptionStyles =
     "mdx:hidden font-normal leading-[19.5px] font-miniFont text-right";
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [widgetData, setWidgetData] = useState(MyWidgetData);
-
+  const isMobile = windowWidth < 667;
   const updateWidgetData = useCallback(() => {
-    const isMobile = windowWidth < 667;
     if (isMobile) {
       setWidgetData(
         MyWidgetData.map((item) => ({
@@ -51,7 +51,7 @@ export default function Main() {
         }))
       );
     }
-  }, [windowWidth, MyWidgetData]);
+  }, [MyWidgetData, isMobile]);
 
   useEffect(() => {
     updateWidgetData();
@@ -68,7 +68,10 @@ export default function Main() {
   }, [updateWidgetData]);
 
   return (
-    <section className="flex justify-between mdx:flex-wrap w-full mt-[90px]">
+    <section
+      style={isMobile ? { backgroundImage: `url(${background})` } : undefined}
+      className="flex justify-between mdx:flex-wrap w-full mt-[90px] mdx:px-[15px] bg-no-repeat bg-cover mdx:mt-[20px] mdx:pt-[60px]"
+    >
       <section className="w-[362px] text-left">
         <div>
           <p className="text-[48px] leading-[58.09px]">Зарабатывайте больше</p>

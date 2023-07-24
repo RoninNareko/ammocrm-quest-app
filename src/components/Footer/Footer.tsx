@@ -3,7 +3,7 @@ import { LiaPhoneVolumeSolid } from "react-icons/lia";
 
 export default function Footer() {
   return (
-    <footer className="mt-[124px] mdx:mt-[35px]">
+    <footer className="mt-[124px] mdx:mt-[35px] mdx:px-[15px]">
       <div
         className="grid gap-4 
       grid-cols-4 "
