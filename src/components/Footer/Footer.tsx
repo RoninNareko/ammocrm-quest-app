@@ -3,9 +3,12 @@ import { LiaPhoneVolumeSolid } from "react-icons/lia";
 
 export default function Footer() {
   return (
-    <footer className="mt-[124px]">
-      <div className="grid gap-4 grid-cols-4">
-        <div>
+    <footer className="mt-[124px] mdx:mt-[35px]">
+      <div
+        className="grid gap-4 
+      grid-cols-4 "
+      >
+        <div className="mdx:col-start-1 mdx:col-end-4">
           <ul className="text-left">
             <p className="text-[#656566] text-[14px] font-bold uppercase mb-[20px]">
               О компании
@@ -18,7 +21,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div>
+        <div className="mdx:col-start-1 mdx:col-end-3">
           <ul className="text-left">
             <p className="text-[#656566] text-[14px] font-bold uppercase mb-[20px]">
               Меню
@@ -40,7 +43,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div>
+        <div className="mdx:col-start-3 mdx:col-end-4 mdx:w-max">
           <ul className="text-left">
             <p className="mb-[20px] text-transparent">_</p>
             <li className="mt-[10px]">
@@ -60,15 +63,15 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div>
-          <ul className="text-right">
+        <div className="mdx:col-start-1 mdx:col-end-4">
+          <ul className="text-right mdx:text-left">
             <p className="text-[#656566] text-[14px] font-bold uppercase mb-[20px]">
               Контакты
             </p>
             <li className="mt-[10px]">
               <a href="tel:+75555555555">+7 555 555-55-55</a>
             </li>
-            <li className="flex gap-[10px] justify-end">
+            <li className="flex gap-[10px] justify-end mdx:justify-start">
               <a href="/#">
                 <BiLogoTelegram width={20} height={20} />
               </a>
@@ -85,7 +88,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <section className="mt-[33px] text-[12px] font-miniFont font-normal text-right">
+      <section className="mt-[33px] text-[12px] font-miniFont font-normal text-right mdx:text-start">
         <p>©WELBEX 2022. Все права защищены.</p>
         <a href="/#" className="underline">
           Политика конфиденциальности
