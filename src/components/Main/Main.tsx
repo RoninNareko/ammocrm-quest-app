@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 
-export function Main() {
+export default function Main() {
   const MyWidgetData = useMemo(
     () => [
       {

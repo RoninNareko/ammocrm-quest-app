@@ -36,7 +36,7 @@ export default function Header() {
       </section>
       <section className="hidden gap-[47px] md:flex">
         <div>
-          <p>+7 555 555-55-55</p>
+          <a href="tel:+75555555555">+7 555 555-55-55</a>
         </div>
         <div className="flex gap-[30px]">
           <a href="/#">
